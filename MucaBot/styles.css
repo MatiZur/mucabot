@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cadetblue;
+    color: rgb(200, 232, 233);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    font-size: 25px;
+}
+
+.header{
+    background-color: rgb(77, 116, 117);
+    font-size: 30px;
+}
+
+.footer{
+    background-color: rgb(77, 116, 117);
+    font-size: 20px;
+}
