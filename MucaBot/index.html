@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MucaBot - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>MucaBot</title>
 </head>
 <body>
     <header class="header">
-        <h1>MUCABOT</h1>
+        <nav class="navbar">
+            <h1 class="logo">MUCABOT</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="activo">Home</a></li>
+                <li><a href="producto.html">Sobre el producto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <div>
-        <br><br>
-        <p>Te presentamos a <strong>MucaBot</strong>, la aplicación inteligente ideal para la compra de tus productos.</p>
-    </div>
+
+    <main>
+        <section class="home">
+            <div class="home-content">
+                <div class="home-texto">
+                    <p class="intro">
+                        Te presentamos a <strong>MucaBot</strong>, la aplicación inteligente ideal para la compra de tus productos.
+                    </p>
+                    <a class="boton" href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale" target="_blank">
+                        Descargar app
+                    </a>
+                    <p class="slogan">Comprá mejor, gastá menos.</p>
+                </div>
+                <div class="home-carrusel">
+                    <div class="carousel">
+                        <div class="slides">
+                            <img src="img/1.png" alt="Imagen 1">
+                            <img src="img/2.png" alt="Imagen 2">
+                            <img src="img/3.png" alt="Imagen 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <br>
         <p>© 2025 MucaCorporation. Todos los derechos reservados.</p>
-        <br>
     </footer>
 </body>
 </html>

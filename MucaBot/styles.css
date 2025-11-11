@@ -1,25 +1,230 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: cadetblue;
-    color: rgb(200, 232, 233);
+    color: rgb(220, 240, 240);
     font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     text-align: center;
-    font-size: 25px;
-}
-
-.header{
-    background-color: rgb(77, 116, 117);
-    font-size: 30px;
-}
-
-.footer{
-    background-color: rgb(77, 116, 117);
     font-size: 20px;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    background-color: rgb(77, 116, 117);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(220, 240, 240);
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .activo {
+    background-color: rgba(50, 80, 80, 0.8);
+    color: white;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 60px 0;
+    width: 100%;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.home-texto {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.home-texto .intro {
+    font-size: 24px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: rgba(50, 80, 80, 0.9);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: rgb(60, 90, 90);
+}
+
+.slogan {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.home-carrusel {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 500px;
+    height: 750px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slides {
+    display: flex;
+    animation: slide 9s infinite;
+}
+
+.home-carrusel .carousel {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.producto, .contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.producto .producto-texto, .contacto .contacto-texto {
+    background-color: rgba(50, 80, 80, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 950px;
+    color: rgb(220, 240, 240);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.producto .producto-texto p, .contacto .contacto-texto p {
+    margin: 20px;
+}
+
+.redes {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.redes li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono {
+    width: 24px;
+    height: 24px;
+}
+
+.equipo-titulo {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.equipo {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.persona {
+    background-color: rgb(77, 116, 117);
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+}
+
+.persona img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: rgb(77, 116, 117);
+    padding: 15px;
+    font-size: 18px;
 }
