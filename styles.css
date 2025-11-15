@@ -1,28 +1,100 @@
-* {
+* {   /* el asterisco significa que este estilo afecta a todos los elementos html en conjunto (elemento padre) */
     margin: 0;          
     padding: 0;         
     box-sizing: border-box; 
 }
 
+/* Tablets: entre 481px y 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Menú vertical */
+        gap: 15px;
+    }
+
+    .home-contenido {
+        flex-direction: column; /* Contenido del home apilado */
+        gap: 30px;
+    }
+
+    .home-texto .introduccion {
+        font-size: 20px;
+    }
+
+    .eslogan {
+        font-size: 18px;
+    }
+
+    .carrusel {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .persona {
+        width: 140px; /* Menor tamaño en tarjetas del equipo */
+    }
+}
+
+/* Celulares: hasta 480px */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-texto .introduccion {
+        font-size: 18px;
+    }
+
+    .eslogan {
+        font-size: 16px;
+    }
+
+    .boton {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .home-contenido {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .carrusel {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .persona {
+        width: 120px; /* Ajusta tarjetas para móviles */
+    }
+}
+
 /* --- body --- */
 body {
-    display: flex;              
-    flex-direction: column;     
+    display: flex;   /* display flex para que los elementos de la pagina se adapten a las distintas agrupaciones de los elementos (horizontal, vertical) */           
+    flex-direction: column;   /* esto hace que los elementos de la pagina tengan un aspecto vertical osea encolumnados */
     min-height: 100vh;          
     background-color: cadetblue;
     color: rgb(220, 240, 240);
     font-family: "Outfit", sans-serif;
-    text-align: center;
+    text-align: center; /* texto centrado */
     font-size: 20px;
     margin: 0;                  
 }
 
 /* --- main --- */
 main {
-    flex: 1;                     
+    flex: 1;  /* abreviatura del flex para que todos los elementos del main ocupen equitativamente el espacio de la pagina */                   
     display: flex;
-    justify-content: center;     
-    align-items: center;         
+    justify-content: center; /* esta linea distribuye originalmente de que manera cada componente ocupa su espacio, en este caso centrado */
+    align-items: center; /* alineamos dentro de ese mismo espacio que se genera cada componente su contenido */   
     width: 100%;
 }
 
@@ -34,30 +106,30 @@ main {
 
 .navbar {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;  /* space around sirve para que cada elemento contenido en el flex ocupe de manera equitativa un espacio */
     align-items: center;
 }
 
 .logo {
     font-size: 28px;
 }
-
+/* -- Links --*/
 .nav-links {
-    list-style: none;       
+    list-style: none; /* para eliminar caracteres especiales de las listas como puntos o numeros */  
     display: flex;
-    gap: 20px;              
+    gap: 20px; /* es la diferencia de espacio entre cada link */             
 }
 
 .nav-links a {
-    text-decoration: none;  
+    text-decoration: none;  /* para sacarle el subrayado azul de los links */
     color: rgb(220, 240, 240);
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s; /* mini animacion para los links y que sea mas atractivo */
 }
 
-.nav-links a:hover,
+.nav-links a:hover, /* hover es para cuando el cursor esta encima del elemento */
 .nav-links .activo {
     background-color: rgba(50, 80, 80, 0.8);
     color: white;
@@ -75,12 +147,12 @@ main {
 /* contenedor de home */
 .home-contenido {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* asegura un espacio en medio de los elementos, en este caso dos divs */
     align-items: center;
     width: 90%;
     max-width: 1200px;
     gap: 50px;
-    flex-wrap: wrap;  
+    flex-wrap: wrap; /* permite organizar el texto o elementos en caso de no caber dentro de su contenido, por lo que pasaran a la siguiente linea osea abajo */
     margin: 0 auto;
 }
 
@@ -134,7 +206,7 @@ main {
 .carrusel {
     width: 500px;             
     height: 750px;            
-    overflow: hidden;         
+    overflow: hidden;   /* esto elimina posibles desbordamientos del espacio en el div, evitando posibles scrolls horizontales */      
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -142,7 +214,7 @@ main {
 /* contenedor de imagenes */
 .slides {
     display: flex;
-    animation: slide 9s infinite; 
+    animation: slide 9s infinite;  /* aplicamos un estilo que le da una animacion en este caso un slide */
 }
 
 /* ajuste responsivo del carrusel */
@@ -159,7 +231,7 @@ main {
 .slides img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   
+    object-fit: cover;   /* utilizado para adaptar la imagen al slide o al propio div sin que sobrepase el contenedor */
 }
 
 /* animacion del carrusel */
