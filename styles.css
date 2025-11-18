@@ -4,15 +4,15 @@
     box-sizing: border-box; 
 }
 
-/* Tablets: entre 481px y 768px */
+/* tablets: entre 481px y 768px */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Menú vertical */
+        flex-direction: column; /* menu vertical */
         gap: 15px;
     }
 
     .home-contenido {
-        flex-direction: column; /* Contenido del home apilado */
+        flex-direction: column; /* contenido del home apilado */
         gap: 30px;
     }
 
@@ -31,11 +31,11 @@
     }
 
     .persona {
-        width: 140px; /* Menor tamaño en tarjetas del equipo */
+        width: 140px; /* menor tamaño en tarjetas del equipo */
     }
 }
 
-/* Celulares: hasta 480px */
+/* celulares: hasta 480px */
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column; 
@@ -72,7 +72,7 @@
     }
 
     .persona {
-        width: 120px; /* Ajusta tarjetas para móviles */
+        width: 120px; /* ajusta tarjetas para celulares */
     }
 }
 
@@ -113,7 +113,7 @@ main {
 .logo {
     font-size: 28px;
 }
-/* -- Links --*/
+/* -- links --*/
 .nav-links {
     list-style: none; /* para eliminar caracteres especiales de las listas como puntos o numeros */  
     display: flex;
@@ -332,28 +332,28 @@ main {
     font-size: 18px;
 }
 
-.mucabot-container {
+.mucabot-container { /* cuadro general del servicio */
     width: 390px;
     background: #ffffff;
     border-radius: 40px;
     padding: 25px;
     margin: 40px auto;
     box-shadow: 0 0 30px rgba(0,0,0,0.15);
-    font-family: "Outfit", sans-serif;
+    font-family: "Outfit", sans-serif; /* misma fuente que el html */
 }
 
-.mucabot-container h3{
+.mucabot-container h3{ /* subtitulos internos */
     color: #1c7066;
 }
 
-.mucabot-title {
+.mucabot-title { /* titulo grande mucabot */
     color: #1c7066;
     font-size: 32px;
     font-weight: 900;
     margin-bottom: 15px;
 }
 
-.mucabot-boxinfo {
+.mucabot-boxinfo { /* cuadro de sugerencias */
     background: #eefaf7;
     color: #1c7066;
     padding: 15px;
@@ -361,36 +361,36 @@ main {
     margin-bottom: 20px;
     border: 1px solid #d4eee8;
     font-size: 14px;
-    display: flex;
+    display: flex; /* icono + texto */
     gap: 10px;
     align-items: center;
 }
 
-.mucabot-grid {
+.mucabot-grid { /* grilla de items con checkbox */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-.mucabot-card {
+.mucabot-card { /* tarjeta individual de cada categoria */
     background: #f7fffd;
     padding: 12px;
     border-radius: 18px;
     border: 1px solid #d6eee9;
 }
 
-.mucabot-card label{
+.mucabot-card label{ /* texto del checkbox */
     color: black;
 }
 
-.categoria {
+.categoria { /* titulo de cada categoria */
     font-weight: bold;
     font-size: 15px;
     color: #1a6e63;
     margin-bottom: 5px;
 }
 
-.precio-item {
+.precio-item { /* fila con imagen + precio */
     color: black;
     display: flex;
     align-items: center;
@@ -399,11 +399,11 @@ main {
     font-weight: bold;
 }
 
-.precio-item img {
+.precio-item img { /* icono de cada producto */
     width: 55px;
 }
 
-#listaFinal {
+#listaFinal { /* cuadro donde aparece la lista del usuario */
     color:black;
     margin-top: 25px;
     padding: 15px;

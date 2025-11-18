@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MucaBot - Servicio</title> <!-- Titulo de la pagina web -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- set de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajuste para mobile -->
+    <title>MucaBot - Servicio</title> <!-- titulo de la pagina -->
+    <link rel="stylesheet" href="styles.css"> <!-- link al css -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"> <!-- fuente -->
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">MUCABOT</h1>
-            <ul class="nav-links">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="producto.html">Sobre el producto</a></li>
-                <li><a href="empresa.html">Quiénes somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="servicio.html" class="activo">Probar servicio</a></li>
+    <header class="header"> <!-- header principal -->
+        <nav class="navbar"> <!-- barra de navegacion -->
+            <h1 class="logo">MUCABOT</h1> <!-- logo -->
+            <ul class="nav-links"> <!-- lista de links -->
+                <li><a href="index.html">Home</a></li> <!-- link home -->
+                <li><a href="producto.html">Sobre el producto</a></li> <!-- link producto -->
+                <li><a href="empresa.html">Quiénes somos</a></li> <!-- link empresa -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- link contacto -->
+                <li><a href="servicio.html" class="activo">Probar servicio</a></li> <!-- link activo -->
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="servicio">
+    <main> <!-- contenido principal -->
+        <section class="servicio"> <!-- seccion del servicio -->
 
-            <div class="mucabot-container">
+            <div class="mucabot-container"> <!-- contenedor general -->
 
-                <h2 class="mucabot-title">MUCABOT</h2>
+                <h2 class="mucabot-title">MUCABOT</h2> <!-- titulo grande -->
 
-                <div class="mucabot-boxinfo">
-                    <img src="img/mucaBot.png" width="40">
-                    <span>Aquí tienes algunas sugerencias según tus preferencias:</span>
+                <div class="mucabot-boxinfo"> <!-- cuadro con info -->
+                    <img src="img/mucaBot.png" width="40"> <!-- icono -->
+                    <span>Aquí tienes algunas sugerencias según tus preferencias:</span> <!-- texto -->
                 </div>
 
-                <h3>LISTA DE COMPRAS INTELIGENTE</h3>
+                <h3>LISTA DE COMPRAS INTELIGENTE</h3> <!-- subtitulo -->
 
-                <div class="mucabot-grid">
+                <div class="mucabot-grid"> <!-- grilla de productos -->
 
-                    <div class="mucabot-card">
-                        <div class="categoria">Frutas</div>
-                        <label>
-                            <input type="checkbox" onchange="toggleProducto('Bananas', 1500)"> Bananas
+                    <div class="mucabot-card"> <!-- tarjeta fruta -->
+                        <div class="categoria">Frutas</div> <!-- categoria -->
+                        <label> <!-- item -->
+                            <input type="checkbox" onchange="toggleProducto('Bananas', 1500)"> Bananas <!-- check -->
                         </label>
                     </div>
 
-                    <div class="mucabot-card">
-                        <div class="categoria">Lácteos</div>
+                    <div class="mucabot-card"> <!-- tarjeta lacteo -->
+                        <div class="categoria">Lacteos</div>
                         <label>
                             <input type="checkbox" onchange="toggleProducto('Leche', 2000)"> Leche
                         </label>
                     </div>
 
-                    <div class="mucabot-card">
-                        <div class="categoria">Panadería</div>
+                    <div class="mucabot-card"> <!-- tarjeta panaderia -->
+                        <div class="categoria">Panaderia</div>
                         <label>
                             <input type="checkbox" onchange="toggleProducto('Pan', 3000)"> Pan
                         </label>
                     </div>
 
-                    <div class="mucabot-card">
+                    <div class="mucabot-card"> <!-- tarjeta hogar -->
                         <div class="categoria">Hogar</div>
                         <label>
                             <input type="checkbox" onchange="toggleProducto('Toallas de papel', 2500)"> Toallas de papel
@@ -67,37 +67,38 @@
 
                 </div>
 
-                <div class="precio-item">
-                    <img src="img/banana.png">
+                <!-- precios de ejemplo -->
+                <div class="precio-item"> <!-- precio banana -->
+                    <img src="img/banana.png"> <!-- imagen -->
                     $1500 (KG)
                 </div>
 
-                <div class="precio-item">
+                <div class="precio-item"> <!-- precio leche -->
                     <img src="img/milk.png">
                     $2000
                 </div>
 
-                <div class="precio-item">
+                <div class="precio-item"> <!-- precio pan -->
                     <img src="img/pan.avif">
                     $3000 (KG)
                 </div>
 
-                <div class="precio-item">
+                <div class="precio-item"> <!-- precio papel -->
                     <img src="img/papel.jpg">
                     $2500
                 </div>
 
-                <h3>🛒 Tu Lista:</h3>
-                <div id="listaFinal"></div>
+                <h3>🛒 Tu Lista:</h3> <!-- lista del usuario -->
+                <div id="listaFinal"></div> <!-- contenedor lista -->
 
             </div>
 
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer"> <!-- footer -->
         <p>© 2025 MucaCorporation. Todos los derechos reservados.</p>
     </footer>
 </body>
-<script src="main.js"></script>
+<script src="main.js"></script> <!-- script principal -->
 </html>
