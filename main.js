@@ -30,3 +30,5 @@ function mostrarLista() {
         cont.innerHTML += `✔ ${item.nombre} — $${item.precio}<br>`; // agrega una linea por producto
     }
 }
+
+mostrarLista(); // llama a la funcion apenas carga la pagina
